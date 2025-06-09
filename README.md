@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![image](https://github.com/user-attachments/assets/ac52c202-e2ef-4569-b5ea-051e0cd6f234)
+# Timer Fitness – Plataforma digital para academias modernas
 
-## Getting Started
+Uma aplicação web responsiva simulando um sistema completo para academias, com portal do aluno, controle de treinos, planos, pagamentos e dashboard administrativo. Criado como projeto fictício para a academia "Timer Fitness", com foco em usabilidade e funcionalidades reais.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎯 Ideia Principal
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Desenvolver uma plataforma web responsiva para a academia Timer Fitness, simulando um serviço completo para clientes e equipe, incluindo:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Portal do Aluno com funcionalidades personalizadas;
+- Gestão de treinos e planos de pagamento;
+- Área administrativa para controle de usuários, treinos, avaliações e relatórios;
+- Landing page institucional moderna para marketing e captação.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 💡 Funcionalidades e Recursos
 
-To learn more about Next.js, take a look at the following resources:
+### 🧍 Portal do Aluno
+- Login e cadastro;
+- Visualização do plano contratado (mensal, trimestral, anual);
+- Agenda semanal de treinos;
+- Acompanhamento da evolução física (peso, medidas, repetições);
+- Download da ficha de treino personalizada;
+- Check-in online para presença em aulas;
+- Visualização das aulas coletivas com horários (yoga, spinning, HIIT, etc).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🏋️‍♂️ Treinos Personalizados
+- Cards de treino divididos por grupo muscular;
+- Marcação de treinos concluídos;
+- Recomendações automáticas baseadas no dia da semana (ex: “hoje é dia de pernas”);
+- Avaliação física digital com feedback do personal trainer.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 💳 Pagamento e Planos
+- Visualização do plano ativo;
+- Opção para renovação do plano (simulação de pagamento);
+- Histórico completo de pagamentos.
 
-## Deploy on Vercel
+### 📱 Admin Dashboard
+- Gerenciamento de usuários/alunos;
+- Criação e edição de treinos;
+- Cadastro de novos planos;
+- Registro de avaliações físicas;
+- Emissão de relatórios de frequência e evolução.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 📢 Marketing / Página Pública
+- Landing page institucional com:
+  - Missão e valores da academia;
+  - Fotos do espaço físico;
+  - Destaque dos planos e promoções;
+  - Formulário de contato e inscrição para aula experimental;
+  - Integração com redes sociais e WhatsApp.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Frontend:** React + TypeScript + Styled Components / Bootstrap  
+- **Persistência:** LocalStorage para simular backend e armazenamento de dados  
+- **Design:** Layout responsivo para desktop e mobile  
+- **Extras:**  
+  - Gerenciamento global de estado com Context API ou Zustand (opcional)  
+  - Notificações toast para sucesso e erros  
+  - Autenticação fake (simulada localmente)  
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seuusuario/timer-fitness.git
+cd timer-fitness (se nao tiver já)
+Npm install
+Npm run dev
