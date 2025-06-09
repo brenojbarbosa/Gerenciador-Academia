@@ -67,14 +67,7 @@ export default function Contato() {
             <button type="submit" className="btn btn-primary me-3">
               Enviar
             </button>
-            <a
-              href="https://wa.me/5531997933051?text=Olá,%20gostaria%20de%20me%20inscrever%20na%20aula%20experimental%20da%20Timer%20Fitness."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn btn-success"
-            >
-              Quero minha aula experimental
-            </a>
+           
           </div>
         </form>
       </div>
