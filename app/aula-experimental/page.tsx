@@ -31,33 +31,45 @@ export default function AulaExperimental() {
   return (
     <section className="container py-5">
       <h1 className="text-center mb-4">Agende sua Aula Experimental</h1>
-      <form className="row g-3" onSubmit={handleSubmit}>
-        <div className="col-md-6">
-          <input
-            className="form-control"
-            type="text"
-            placeholder="Nome completo"
-            value={nome}
-            onChange={(e) => setNome(e.target.value)}
-            required
-          />
-        </div>
-        <div className="col-md-6">
-          <input
-            className="form-control"
-            type="tel"
-            placeholder="Telefone com DDD"
-            value={telefone}
-            onChange={(e) => setTelefone(e.target.value)}
-            required
-          />
-        </div>
-        <div className="col-12 text-center">
-          <button type="submit" className="btn btn-primary">
-            Agendar
-          </button>
-        </div>
-      </form>
+      
+      {/* Quadro que envolve o form */}
+      <div
+        style={{
+          border: "2px solid #0d6efd",
+          borderRadius: "12px",
+          padding: "24px",
+          backgroundColor: "rgba(13, 110, 253, 0.1)", // azul clarinho opaco
+          boxShadow: "0 0 15px rgba(13, 110, 253, 0.2)",
+        }}
+      >
+        <form className="row g-3" onSubmit={handleSubmit}>
+          <div className="col-md-6">
+            <input
+              className="form-control"
+              type="text"
+              placeholder="Nome completo"
+              value={nome}
+              onChange={(e) => setNome(e.target.value)}
+              required
+            />
+          </div>
+          <div className="col-md-6">
+            <input
+              className="form-control"
+              type="tel"
+              placeholder="Telefone com DDD"
+              value={telefone}
+              onChange={(e) => setTelefone(e.target.value)}
+              required
+            />
+          </div>
+          <div className="col-12 text-center">
+            <button type="submit" className="btn btn-primary">
+              Agendar
+            </button>
+          </div>
+        </form>
+      </div>
 
       <ToastContainer position="bottom-end" className="p-3">
         <Toast
