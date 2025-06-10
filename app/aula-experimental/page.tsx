@@ -7,13 +7,15 @@ import { Toast, ToastContainer } from "react-bootstrap";
 export default function AulaExperimental() {
   const [nome, setNome] = useState("");
   const [telefone, setTelefone] = useState("");
+  const [data, setData] = useState("");
+  const [objetivo, setObjetivo] = useState("");
   const [showToast, setShowToast] = useState(false);
   const router = useRouter();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!nome || !telefone) {
+    if (!nome || !telefone || !data || !objetivo) {
       alert("Preencha todos os campos");
       return;
     }
@@ -22,6 +24,8 @@ export default function AulaExperimental() {
       setShowToast(true);
       setNome("");
       setTelefone("");
+      setData("");
+      setObjetivo("");
       setTimeout(() => {
         router.push("/");
       }, 3000);
@@ -31,14 +35,13 @@ export default function AulaExperimental() {
   return (
     <section className="container py-5">
       <h1 className="text-center mb-4">Agende sua Aula Experimental</h1>
-      
-  
+
       <div
         style={{
           border: "2px solid #0d6efd",
           borderRadius: "12px",
           padding: "24px",
-          backgroundColor: "rgba(13, 110, 253, 0.1)", 
+          backgroundColor: "rgba(13, 110, 253, 0.1)",
           boxShadow: "0 0 15px rgba(13, 110, 253, 0.2)",
         }}
       >
@@ -56,10 +59,29 @@ export default function AulaExperimental() {
           <div className="col-md-6">
             <input
               className="form-control"
-              type="number"
+              type="tel"
               placeholder="Telefone com DDD"
               value={telefone}
               onChange={(e) => setTelefone(e.target.value)}
+              required
+            />
+          </div>
+          <div className="col-md-6">
+            <input
+              className="form-control"
+              type="date"
+              value={data}
+              onChange={(e) => setData(e.target.value)}
+              required
+            />
+          </div>
+          <div className="col-md-6">
+            <input
+              className="form-control"
+              type="text"
+              placeholder="Qual seu objetivo com a aula?"
+              value={objetivo}
+              onChange={(e) => setObjetivo(e.target.value)}
               required
             />
           </div>

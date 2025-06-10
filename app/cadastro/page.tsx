@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -36,48 +36,64 @@ export default function Cadastro() {
   };
 
   return (
-    <section className="py-5">
+    <section
+      className="py-5 bg-light position-relative"
+      style={{ margin: "40px" }}
+    >
       <div className="container">
         <h2 className="text-center mb-4">Cadastro</h2>
-        <form className="mx-auto" style={{ maxWidth: '400px' }} onSubmit={handleSubmit}>
-          {erro && <div className="alert alert-danger">{erro}</div>}
-          <div className="mb-3">
-            <input
-              type="text"
-              name="nome"
-              className="form-control"
-              placeholder="Nome"
-              value={formData.nome}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="email"
-              name="email"
-              className="form-control"
-              placeholder="E-mail"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="password"
-              name="senha"
-              className="form-control"
-              placeholder="Senha"
-              value={formData.senha}
-              onChange={handleChange}
-              required
-            />
-          </div>
-          <button type="submit" className="btn btn-primary w-100">
-            Cadastrar
-          </button>
-        </form>
+
+        <div
+          style={{
+            backgroundColor: "white",
+            border: "2px solid #0d6efd",
+            borderRadius: "12px",
+            padding: "50px",
+            maxWidth: "500px",
+            margin: "0 auto",
+            boxShadow: "0 0 25px rgba(13, 110, 253, 0.15)",
+          }}
+        >
+          <form onSubmit={handleSubmit}>
+            {erro && <div className="alert alert-danger">{erro}</div>}
+            <div className="mb-3">
+              <input
+                type="text"
+                name="nome"
+                className="form-control"
+                placeholder="Nome"
+                value={formData.nome}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                type="email"
+                name="email"
+                className="form-control"
+                placeholder="E-mail"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="mb-3">
+              <input
+                type="password"
+                name="senha"
+                className="form-control"
+                placeholder="Senha"
+                value={formData.senha}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <button type="submit" className="btn btn-primary w-100">
+              Cadastrar
+            </button>
+          </form>
+        </div>
       </div>
     </section>
   );
