@@ -4,10 +4,16 @@ import { useState } from "react";
 import { Toast, ToastContainer } from "react-bootstrap";
 
 export default function Contato() {
-  const [formData, setFormData] = useState({ nome: "", email: "", mensagem: "" });
+  const [formData, setFormData] = useState({
+    nome: "",
+    email: "",
+    mensagem: "",
+  });
   const [showToast, setShowToast] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
@@ -67,12 +73,15 @@ export default function Contato() {
             <button type="submit" className="btn btn-primary me-3">
               Enviar
             </button>
-           
           </div>
         </form>
       </div>
 
-      <ToastContainer position="bottom-end" className="p-3">
+      <ToastContainer
+        position="bottom-end"
+        className="p-3"
+        style={{ position: "fixed" }}
+      >
         <Toast
           show={showToast}
           onClose={() => setShowToast(false)}
@@ -83,7 +92,9 @@ export default function Contato() {
           <Toast.Header>
             <strong className="me-auto">Sucesso</strong>
           </Toast.Header>
-          <Toast.Body className="text-white">Mensagem enviada com sucesso!</Toast.Body>
+          <Toast.Body className="text-white">
+            Mensagem enviada com sucesso!
+          </Toast.Body>
         </Toast>
       </ToastContainer>
     </section>

@@ -32,13 +32,13 @@ export default function AulaExperimental() {
     <section className="container py-5">
       <h1 className="text-center mb-4">Agende sua Aula Experimental</h1>
       
-      {/* Quadro que envolve o form */}
+  
       <div
         style={{
           border: "2px solid #0d6efd",
           borderRadius: "12px",
           padding: "24px",
-          backgroundColor: "rgba(13, 110, 253, 0.1)", // azul clarinho opaco
+          backgroundColor: "rgba(13, 110, 253, 0.1)", 
           boxShadow: "0 0 15px rgba(13, 110, 253, 0.2)",
         }}
       >
@@ -56,7 +56,7 @@ export default function AulaExperimental() {
           <div className="col-md-6">
             <input
               className="form-control"
-              type="tel"
+              type="number"
               placeholder="Telefone com DDD"
               value={telefone}
               onChange={(e) => setTelefone(e.target.value)}
