@@ -1,4 +1,6 @@
 ![image](https://github.com/user-attachments/assets/ac52c202-e2ef-4569-b5ea-051e0cd6f234)
+![image](https://github.com/user-attachments/assets/5a54cce2-cc1f-4a1b-a5ee-18127939cbe9)
+
 # Timer Fitness – Plataforma digital para academias modernas
 
 Uma aplicação web responsiva simulando um sistema completo para academias, com portal do aluno, controle de treinos, planos, pagamentos e dashboard administrativo. Criado como projeto fictício para a academia "Timer Fitness", com foco em usabilidade e funcionalidades reais.
